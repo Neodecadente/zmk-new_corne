@@ -51,11 +51,11 @@ layers:
   - {t: '$$mdi:apple-keyboard-command$$', h: GAMING}
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+E
-  - Alt+F4
-  - Alt+F5
+  - '|'
+  - <
+  - '>'
+  - (
+  - )
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: /, s: '?'}
   - '*'
@@ -64,11 +64,11 @@ layers:
   - {t: '9', s: (}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+A
-  - Ctl+S
-  - Ctl+F
-  - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+G
+  - '&'
+  - '!'
+  - '?'
+  - {t: '=', s: +}
+  - '#'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -79,15 +79,15 @@ layers:
   - {t: '6', s: ^}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
+  - '*'
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - '{'
+  - '}'
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - $
+  - {t: '0', s: )}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -106,41 +106,41 @@ layers:
   - F4
   - F5
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '`', s: '~'}
+  - {t: /, s: '?'}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: '=', s: +}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - F6
   - F7
   - F8
   - F9
   - F10
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - '"'
+  - {t: \, s: '|'}
   - '{'
   - '}'
-  - {t: \, s: '|'}
+  - <
+  - '>'
+  - {t: '$$mdi:transfer$$', type: trans}
   - F11
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - F12
+  - F13
+  - F14
+  - F15
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '''', s: '"'}
-  - {t: '`', s: '~'}
-  - {t: 'Sft+[', s: 'Sft+{'}
-  - {t: 'Sft+]', s: 'Sft+}'}
   - '|'
-  - F12
+  - '?'
+  - '!'
+  - '&'
+  - '@'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
