@@ -66,10 +66,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans     &trans     &kp LC(E)  &kp LA(F4)  &kp LA(F5)                                &mmv MOVE_UP                     &kp PRINTSCREEN  &kp HOME  &kp N7  &kp N8  &kp N9  &kp BSPC
-&trans  &kp LC(A)  &kp LC(S)  &kp LC(F)  &trans      &kp LC(G)                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp INSERT       &kp END   &kp N4  &kp N5  &kp N6  &kp DELETE
-&trans  &trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)   &kp C_MUTE                    &mmv MOVE_DOWN                   &kp COMMA        &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0
-                              &trans     &trans      &trans                                                                     &trans           &trans    &trans
+&trans  &trans     &trans     &kp LC(E)  &kp LA(F4)  &kp LA(F5)                                &mmv MOVE_UP                     &kp FSLH   &kp STAR   &kp N7  &kp N8  &kp N9  &trans
+&trans  &kp LC(A)  &kp LC(S)  &kp LC(F)  &trans      &kp LC(G)                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS   &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DELETE
+&trans  &trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)   &kp C_MUTE                    &mmv MOVE_DOWN                   &kp COMMA  &kp DOT    &kp N1  &kp N2  &kp N3  &kp N0
+                              &trans     &trans      &trans                                                                     &trans     &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -78,7 +78,7 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                            &mmv MOVE_UP                     &kp F6     &kp F7    &kp F8        &kp F9        &kp F10   &kp BSPC
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                            &mmv MOVE_UP                     &kp F6     &kp F7    &kp F8        &kp F9        &kp F10   &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp COMMA  &kp DOT   &kp LBRC      &kp RBRC      &kp BSLH  &kp F11
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS  &kp LS(LBKT)  &kp LS(RBKT)  &kp PIPE  &kp F12
                         &trans  &trans  &trans                                                             &trans     &trans    &trans
@@ -89,10 +89,10 @@
 
         toggle_layer {
             bindings = <
-&kp ESC    &kp N1    &kp N2  &kp N3  &kp N4  &kp N5                    &trans          &trans  &trans    &trans    &trans     &trans  &trans
-&kp LSHFT  &kp Q     &kp W   &kp E   &kp R   &kp T             &trans  &trans  &trans  &trans  &trans    &kp UP    &trans     &trans  &trans
-&kp LCTRL  &kp LGUI  &kp Z   &kp X   &kp C   &kp V   &trans            &trans          &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-                             &trans  &trans  &trans                                    &trans  &trans    &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &trans          &trans  &trans    &trans    &trans     &trans  &trans
+&trans  &kp Q   &kp W   &kp E   &kp R   &kp T             &trans  &trans  &trans  &trans  &trans    &kp UP    &trans     &trans  &trans
+&trans  &trans  &kp Z   &kp X   &kp C   &kp V   &trans            &trans          &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans    &trans
             >;
 
             label = "GAMING";
