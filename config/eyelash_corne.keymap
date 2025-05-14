@@ -66,10 +66,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp PIPE       &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                &mmv MOVE_UP                     &kp FSLH    &kp STAR   &kp N7  &kp N8  &kp N9  &trans
-&trans  &kp AMPERSAND  &kp EXCL          &kp QUESTION       &kp EQUAL             &kp HASH                             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DELETE
-&trans  &kp ASTRK      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp C_MUTE                    &mmv MOVE_DOWN                   &kp DOLLAR  &kp N0     &kp N1  &kp N2  &kp N3  &kp N0
-                                         &trans             &trans                &trans                                                                                &trans      &trans     &trans
+&trans  &kp PIPE      &kp LT        &kp LS(GT)     &kp LS(LPAR)   &kp LS(RPAR)                                 &mmv MOVE_UP                     &kp LS(FSLH)  &kp LS(STAR)  &kp N7  &kp N8  &kp N9  &trans
+&trans  &kp LS(AMPS)  &kp LS(EXCL)  &kp LS(QMARK)  &kp LS(EQUAL)  &kp LS(POUND)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS      &kp MINUS     &kp N4  &kp N5  &kp N6  &kp DELETE
+&trans  &kp AT        &kp LS(LBKT)  &kp LS(RBKT)   &kp LBRC       &kp RBRC       &kp C_MUTE                    &mmv MOVE_DOWN                   &kp LS(DLLR)  &kp N0        &kp N1  &kp N2  &kp N3  &kp N0
+                                    &trans         &trans         &trans                                                                        &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -78,10 +78,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                             &mmv MOVE_UP                     &kp GRAVE          &kp PRINTSCREEN  &trans        &trans    &trans  &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DOUBLE_QUOTES  &kp INSERT       &trans        &trans    &trans  &kp HOME
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans                    &mmv MOVE_DOWN                   &kp SQT            &kp BACKSLASH    &kp QUESTION  &kp EXCL  &trans  &kp END
-                          &trans   &trans   &trans                                                              &trans             &trans           &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                             &mmv MOVE_UP                     &kp GRAVE    &kp PRINTSCREEN  &trans         &trans        &trans  &trans
+&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LS(DQT)  &kp INSERT       &trans         &trans        &trans  &kp HOME
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans                    &mmv MOVE_DOWN                   &kp SQT      &kp BSLH         &kp LS(QMARK)  &kp LS(EXCL)  &trans  &kp END
+                          &trans   &trans   &trans                                                              &trans       &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
