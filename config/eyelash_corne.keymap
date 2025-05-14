@@ -3,11 +3,11 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include "keys_es_latin_american.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "keys_es_latin_american.h"
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -64,9 +64,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESCAPE  &kp Q      &kp W  &kp E         &kp R  &kp T                             &kp UP                &kp Y   &kp U  &kp I  &kp O      &kp P      &kp BSPC
-&kp TAB     &kp A      &kp S  &kp D         &kp F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H   &kp J  &kp K  &kp L      &kp TILDE  &kp GRAVE
-&kp LCTRL   &kp MINUS  &kp Z  &kp X         &kp C  &kp V      &kp SPACE              &kp DOWN              &kp B   &kp N  &kp M  &kp COMMA  &kp DOT    &kp ENTER
+&kp ESCAPE  &kp Q      &kp W  &kp E         &kp R  &kp T                             &kp UP                &kp Y   &kp U  &kp I  &kp O      &kp P           &kp BSPC
+&kp TAB     &kp A      &kp S  &kp D         &kp F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H   &kp J  &kp K  &kp L      &kp ES_N_TILDE  &kp GRAVE
+&kp LCTRL   &kp MINUS  &kp Z  &kp X         &kp C  &kp V      &kp SPACE              &kp DOWN              &kp B   &kp N  &kp M  &kp COMMA  &kp DOT         &kp ENTER
                               &kp LEFT_ALT  &mo 1  &kp SPACE                                               &mayus  &mo 2  &game
             >;
 
@@ -76,10 +76,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp PIPE       &kp LT            &kp GREATER_THAN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                &mmv MOVE_UP                     &kp SLASH   &kp STAR   &kp N7  &kp N8  &kp N9  &trans
-&trans  &kp AMPERSAND  &kp EXCL          &kp QUESTION       &kp EQUAL             &kp HASH                             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DELETE
-&trans  &kp AT         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LBRC              &kp RBRC               &kp C_MUTE                    &mmv MOVE_DOWN                   &kp DOLLAR  &kp N0     &kp N1  &kp N2  &kp N3  &trans
-                                         &trans             &trans                &trans                                                                                &trans      &trans     &trans
+&trans  &kp ES_PIPE       &kp ES_LESS_THAN     &kp ES_GREATER_THAN   &kp ES_LEFT_PARENTHESIS  &kp ES_RIGHT_PARENTHESIS                                &mmv MOVE_UP                     &kp ES_SLASH   &kp ES_STAR   &kp N7  &kp N8  &kp N9  &trans
+&trans  &kp ES_AMPERSAND  &kp ES_EXCLAMATION   &kp ES_QUESTION       &kp ES_EQUAL             &kp ES_HASH                             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp ES_PLUS    &kp ES_MINUS  &kp N4  &kp N5  &kp N6  &kp DELETE
+&trans  &kp ES_AT         &kp ES_LEFT_BRACKET  &kp ES_RIGHT_BRACKET  &kp ES_LEFT_BRACE        &kp ES_RIGHT_BRACE        &kp C_MUTE                    &mmv MOVE_DOWN                   &kp ES_DOLLAR  &kp N0        &kp N1  &kp N2  &kp N3  &trans
+                                               &trans                &trans                   &trans                                                                                   &trans         &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -88,10 +88,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                             &mmv MOVE_UP                     &kp GRAVE          &kp PRINTSCREEN  &kp HOME  &none  &none  &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DOUBLE_QUOTES  &kp INSERT       &kp END   &none  &none  &none
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans                    &mmv MOVE_DOWN                   &kp SQT            &kp BSLH         &none     &none  &none  &trans
-                          &trans   &trans   &trans                                                              &trans             &trans           &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                             &mmv MOVE_UP                     &kp ES_GRAVE             &kp PRINTSCREEN   &kp HOME  &none  &none  &trans
+&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp ES_DOUBLE_QUOTES     &kp INSERT        &kp END   &none  &none  &none
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans                    &mmv MOVE_DOWN                   &kp RS(ES_SINGLE_QUOTE)  &kp ES_BACKSLASH  &none     &none  &none  &trans
+                          &trans   &trans   &trans                                                              &trans                   &trans            &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
