@@ -61,42 +61,51 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "QWERTY";
             bindings = <
-                &kp Q    &kp W    &kp E    &kp R    &kp T    &kp ESC        
-                &kp Y    &kp U    &kp I    &kp O    &kp P    &kp LBKT       
-                &kp A    &kp S    &kp D    &kp F    &kp G    &kp LSHFT      
-                &kp H    &kp J    &kp K    &kp L    &kp SEMI &kp RBKT       
-                &kp Z    &kp X    &kp C    &kp V    &kp B    &kp LCTRL      
-                &kp N    &kp M    &kp COMMA &kp DOT  &kp MINUS &kp RSHFT   
-                &mo LOWER  &kp SPACE  &kp LALT                               
-                &mo RAISE  &kp ENTER  &kp BSPC                              
+&kp ESCAPE  &kp Q      &kp W  &kp E         &kp R  &kp T                             &kp UP                &kp Y   &kp U  &kp I  &kp O      &kp P      &kp BSPC
+&kp TAB     &kp A      &kp S  &kp D         &kp F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H   &kp J  &kp K  &kp L      &kp TILDE  &kp GRAVE
+&kp LCTRL   &kp MINUS  &kp Z  &kp X         &kp C  &kp V      &kp SPACE              &kp DOWN              &kp B   &kp N  &kp M  &kp COMMA  &kp DOT    &kp ENTER
+                              &kp LEFT_ALT  &mo 1  &kp SPACE                                               &mayus  &mo 2  &game
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_layer {
+            display-name = "NUMBER";
             bindings = <
-                &kp N1   &kp N2    &kp N3    &kp N4    &kp N5    &none      
-                &none    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0      
-                &none    &none     &none     &none     &none     &none      
-                &none    &none     &none     &none     &none     &none      
-                &none    &none     &none     &none     &none     &none      
-                &none    &none     &none     &none     &none     &none      
-                &mo LOWER  &kp SPACE  &kp LALT
-                &mo RAISE  &kp ENTER  &kp BSPC
+&trans  &kp PIPE       &kp LT            &kp GREATER_THAN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                &mmv MOVE_UP                     &kp SLASH   &kp STAR   &kp N7  &kp N8  &kp N9  &trans
+&trans  &kp AMPERSAND  &kp EXCL          &kp QUESTION       &kp EQUAL             &kp HASH                             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DELETE
+&trans  &kp AT         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LBRC              &kp RBRC               &kp C_MUTE                    &mmv MOVE_DOWN                   &kp DOLLAR  &kp N0     &kp N1  &kp N2  &kp N3  &trans
+                                         &trans             &trans                &trans                                                                                &trans      &trans     &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         raise_layer {
+            display-name = "SYMBOL";
             bindings = <
-                &kp EXCL   &kp DQT    &kp HASH   &kp DLLR   &kp PRCNT  &none   
-                &none      &kp AMPS   &kp FSLH   &kp LPAR   &kp RPAR   &kp PLUS 
-                &none      &none      &none      &none      &none      &none   
-                &none      &none      &none      &kp QMARK  &kp AT     &kp BSLH 
-                &none      &none      &none      &none      &none      &none   
-                &none      &none      &kp SEMI   &kp COLON  &kp UNDER  &none   
-                &mo LOWER  &kp SPACE  &kp LALT
-                &mo RAISE  &kp ENTER  &kp BSPC
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                             &mmv MOVE_UP                     &kp GRAVE          &kp PRINTSCREEN  &kp HOME  &none  &none  &trans
+&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DOUBLE_QUOTES  &kp INSERT       &kp END   &none  &none  &none
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans                    &mmv MOVE_DOWN                   &kp SQT            &kp BSLH         &none     &none  &none  &trans
+                          &trans   &trans   &trans                                                              &trans             &trans           &trans
             >;
+
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        toggle_layer {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &trans          &kp N6  &kp N7    &kp N8    &kp N9     &kp N0  &trans
+&trans  &kp Q   &kp W   &kp E   &kp R   &kp T             &trans  &trans  &trans  &none   &none     &kp UP    &none      &none   &none
+&trans  &none   &kp Z   &kp X   &kp C   &kp V   &trans            &trans          &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans
+                        &trans  &trans  &trans                                    &trans  &trans    &trans
+            >;
+
+            label = "GAMING";
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
