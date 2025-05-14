@@ -53,22 +53,22 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '|'
   - <
-  - '>'
-  - (
-  - )
+  - Sft+>
+  - Sft+(
+  - Sft+)
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: /, s: '?'}
-  - '*'
+  - {t: Sft+/, s: 'Sft+?'}
+  - Sft+*
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&'
-  - '!'
-  - '?'
-  - {t: '=', s: +}
-  - '#'
+  - Sft+&
+  - Sft+!
+  - Sft+?
+  - {t: Sft+=, s: Sft++}
+  - Sft+#
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -79,14 +79,14 @@ layers:
   - {t: '6', s: ^}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '*'
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - '@'
+  - {t: 'Sft+[', s: 'Sft+{'}
+  - {t: 'Sft+]', s: 'Sft+}'}
   - '{'
   - '}'
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - $
+  - Sft+$
   - {t: '0', s: )}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -121,7 +121,7 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - '"'
+  - Sft+"
   - Ins
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -137,8 +137,8 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '''', s: '"'}
   - {t: \, s: '|'}
-  - '?'
-  - '!'
+  - Sft+?
+  - Sft+!
   - {t: '$$mdi:transfer$$', type: trans}
   - END
   - {t: '$$mdi:transfer$$', type: trans}
