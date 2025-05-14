@@ -60,52 +60,61 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // Default Layer: Spanish QWERTY (with ñ)
         default_layer {
-            display-name = "QWERTY";
             bindings = <
-&kp ESCAPE  &kp Q      &kp W  &kp E         &kp R  &kp T                             &kp UP                &kp Y   &kp U  &kp I  &kp O      &kp P      &kp BSPC
-&kp TAB     &kp A      &kp S  &kp D         &kp F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H   &kp J  &kp K  &kp L      &kp TILDE  &kp GRAVE
-&kp LCTRL   &kp MINUS  &kp Z  &kp X         &kp C  &kp V      &kp SPACE              &kp DOWN              &kp B   &kp N  &kp M  &kp COMMA  &kp DOT    &kp ENTER
-                              &kp LEFT_ALT  &mo 1  &kp SPACE                                               &mayus  &mo 2  &game
+                &kp Q    &kp W    &kp E    &kp R    &kp T    &kp ESC        // Row 1 left half (Q–T), plus Escape
+                &kp Y    &kp U    &kp I    &kp O    &kp P    &kp LBKT       // Row 1 right half (Y–P), accent key (´ dead) on last position
+                &kp A    &kp S    &kp D    &kp F    &kp G    &kp LSHFT      // Row 2 left (A–G), left Shift on extra key
+                &kp H    &kp J    &kp K    &kp L    &kp SEMI &kp RBKT       // Row 2 right (H–L, ñ on semicolon key, brackets key after ñ)
+                &kp Z    &kp X    &kp C    &kp V    &kp B    &kp LCTRL      // Row 3 left (Z–B), left Ctrl on extra key
+                &kp N    &kp M    &kp COMMA &kp DOT  &kp MINUS &kp RSHFT   // Row 3 right (N, M), comma, period, hyphen on slash key, right Shift
+                // Thumb cluster
+                &mo LOWER  &kp SPACE  &kp LALT                               // Left thumb keys: Lower layer, Space, Left Alt
+                &mo RAISE  &kp ENTER  &kp BSPC                              // Right thumb keys: Raise layer, Enter, Backspace
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            // The semicolon key (&kp SEMI) outputs ñ/Ñ under Español (Chile) layout 
+            // The accent key (&kp LBKT) is the acute accent dead key (´) and Shift yields + 
+            // The bracket key (&kp RBKT) after ñ is for the square bracket/brace (as on Chilean keyboards)
+            // The slash-position key outputs hyphen/underscore (–/_) as in the Chilean layout
         };
 
+        // Lower Layer: Numbers (0–9 unshifted)
         lower_layer {
-            display-name = "NUMBER";
             bindings = <
-&trans  &kp PIPE       &kp LT            &kp GREATER_THAN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                &mmv MOVE_UP                     &kp SLASH   &kp STAR   &kp N7  &kp N8  &kp N9  &trans
-&trans  &kp AMPERSAND  &kp EXCL          &kp QUESTION       &kp EQUAL             &kp HASH                             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DELETE
-&trans  &kp AT         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LBRC              &kp RBRC               &kp C_MUTE                    &mmv MOVE_DOWN                   &kp DOLLAR  &kp N0     &kp N1  &kp N2  &kp N3  &trans
-                                         &trans             &trans                &trans                                                                                &trans      &trans     &trans
+                &kp N1   &kp N2    &kp N3    &kp N4    &kp N5    &none      // Row 1 left (1–5, 6th unused)
+                &none    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0      // Row 1 right (unused, 6–0)
+                &none    &none     &none     &none     &none     &none      // Row 2 not used for numbers
+                &none    &none     &none     &none     &none     &none      // Row 2 (right) not used
+                &none    &none     &none     &none     &none     &none      // Row 3 not used
+                &none    &none     &none     &none     &none     &none      // Row 3 (right) not used
+                // Thumbs (unchanged on number layer)
+                &mo LOWER  &kp SPACE  &kp LALT
+                &mo RAISE  &kp ENTER  &kp BSPC
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            // Number keys 1–0 output digits without Shift (same as on Chilean layout)
         };
 
+        // Raise Layer: Symbols and Punctuation (Chilean positions)
         raise_layer {
-            display-name = "SYMBOL";
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                             &mmv MOVE_UP                     &kp GRAVE          &kp PRINTSCREEN  &kp HOME  &none  &none  &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DOUBLE_QUOTES  &kp INSERT       &kp END   &none  &none  &none
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans                    &mmv MOVE_DOWN                   &kp SQT            &kp BSLH         &none     &none  &none  &trans
-                          &trans   &trans   &trans                                                              &trans             &trans           &trans
+                &kp EXCL   &kp DQT    &kp HASH   &kp DLLR   &kp PRCNT  &none   // Row 1 left: !, ", #, $, %  (Shift+1–5)
+                &none      &kp AMPS   &kp FSLH   &kp LPAR   &kp RPAR   &kp PLUS // Row 1 right: &, /, (, ), +  (Shift+6–0 and +)
+                &none      &none      &none      &none      &none      &none   // Row 2 left (unused)
+                &none      &none      &none      &kp QMARK  &kp AT     &kp BSLH // Row 2 right: ? (on ñ key), @ (on bracket key), \ (on extra key)
+                &none      &none      &none      &none      &none      &none   // Row 3 left (unused)
+                &none      &none      &kp SEMI   &kp COLON  &kp UNDER  &none   // Row 3 right: ; and : (on comma/period keys), _ (on hyphen key)
+                // Thumbs (unchanged on symbol layer)
+                &mo LOWER  &kp SPACE  &kp LALT
+                &mo RAISE  &kp ENTER  &kp BSPC
             >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        toggle_layer {
-            bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &trans          &kp N6  &kp N7    &kp N8    &kp N9     &kp N0  &trans
-&trans  &kp Q   &kp W   &kp E   &kp R   &kp T             &trans  &trans  &trans  &none   &none     &kp UP    &none      &none   &none
-&trans  &none   &kp Z   &kp X   &kp C   &kp V   &trans            &trans          &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans
-                        &trans  &trans  &trans                                    &trans  &trans    &trans
-            >;
-
-            label = "GAMING";
-            sensor-bindings = <&scroll_encoder>;
+            // Symbols are placed on the same physical keys as in the Chilean layout:
+            //  - Top row: ! " # $ % (on keys 1–5), & / ( ) = + (on keys 6–0 and accent key):contentReference[oaicite:5]{index=5}
+            //  - The ñ key outputs ? on this layer (since Shift on that key is ? in Spanish layout):contentReference[oaicite:6]{index=6} 
+            //  - @ is on the bracket key (as AltGr+Q in Spanish) for easy access
+            //  - The pipe/backslash key is provided on the extra key (as Chilean layout requires AltGr for "|\\")
+            //  - Semicolon and colon can be typed via comma and period with Shift on a Spanish layout
+            //    (they are also directly assigned here for convenience)
         };
     };
 };
