@@ -2,51 +2,51 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - $$mdi:keyboard-esc$$
-  - Q
-  - W
-  - E
-  - R
-  - T
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Q))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD W))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD E))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD R))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD T))
   - $$mdi:arrow-up-bold$$
-  - Y
-  - U
-  - I
-  - O
-  - P
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Y))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD U))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD I))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD O))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD P))
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
-  - A
-  - S
-  - D
-  - F
-  - G
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD A))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD S))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD D))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD F))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD G))
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - H
-  - J
-  - K
-  - L
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD H))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD J))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD K))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD L))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
-  - {t: '`', s: '~'}
+  - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD BACKSLASH AND PIPE)))
   - $$mdi:apple-keyboard-control$$
-  - {t: '-', s: _}
-  - Z
-  - X
-  - C
-  - V
+  - '&mayus'
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Z))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD X))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD C))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD V))
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
-  - B
-  - N
-  - M
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD B))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD N))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD M))
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '-', s: _}
   - $$mdi:apple-keyboard-option$$
   - NUMBER
-  - $$mdi:keyboard-space$$
-  - '&mayus'
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SPACEBAR))
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - SYMBOL
   - '&game'
   NUMBER:
@@ -57,26 +57,26 @@ layers:
   - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK)))
   - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS)))
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND)))
   - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD RIGHT BRACKET AND RIGHT BRACE))))
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 6 AND CARET)))
   - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 1 AND EXCLAMATION)))
   - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))
   - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS)))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH)))
+  - '&quotes'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND)))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 5 AND PERCENT))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 6 AND CARET))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD RIGHT BRACKET AND RIGHT BRACE))
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - ((RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Q))))
@@ -86,11 +86,11 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD BACKSLASH AND PIPE))
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR)))
-  - {t: '0', s: )}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 1 AND EXCLAMATION))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 2 AND AT))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH))
+  - ((ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD PERIOD AND GREATER THAN)))
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -106,11 +106,11 @@ layers:
   - F4
   - F5
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD BACKSLASH AND PIPE)))
-  - PRINTSCREEN
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PRINTSCREEN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - F6
@@ -121,11 +121,11 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 2 AND AT)))
-  - Ins
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Ins
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - F11
@@ -135,10 +135,10 @@ layers:
   - F15
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - Sft+(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE))
-  - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
