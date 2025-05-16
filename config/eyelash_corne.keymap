@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "game_tap_dance";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN>, <&none>, <&to 3>, <&to 0>;
+            bindings = <&kp LEFT_WIN>, <&none>, <&to 3>;
         };
 
         quotes: quotes {
@@ -66,6 +66,15 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
         tap-ms = <100>;
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        back_to_0 {
+            bindings = <&to 0>;
+            key-positions = <43 46>;
+        };
     };
 
     keymap {
